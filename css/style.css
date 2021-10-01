@@ -1,0 +1,237 @@
+*{
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    margin-top: 40px;
+    margin-left: 60px;
+    font-family: 'Syne Mono', monospace;
+}
+header{
+    background-color: #939b62;
+   height: 50px;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   flex-direction: row;
+   padding: 10px;
+}
+#search{
+    border: none;
+    background-color: #939b62;
+    outline: none;
+}
+#phone{
+    text-decoration: none;
+    color: black;
+}
+/* /////////корзина///////// */
+.cart{
+    display: flex;
+    font-size: 21px;
+    border-radius: 10px solid  #ffd56b;
+    position: relative;
+}
+
+.cart:hover .product-container {
+    display: block;
+}
+/* .box-product-container{
+    display: flex;
+    justify-content: start;
+} */
+.product-container{
+max-width: 270px;
+width: 270px;
+padding: 20px;
+background-color: #ffd56b;
+display: none;
+position: absolute;
+font-size: small;
+}
+.product-header{
+    width: 100%;
+    max-width: 270px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid  #939b62;
+    margin: 0 auto;
+}
+.prod-title{
+    width: 45%;
+}
+.price{
+    width: 15%;
+    display: flex;
+   align-items: center;
+}
+.quantity{
+        width: 30%;
+        display: flex;
+       align-items: center;
+}
+.total{
+    width: 10%;
+    display: flex;
+   align-items: center;
+}
+.product{
+    width: 45%;
+    display: flex;
+    padding: 10px 0;
+}
+.products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.basketTotalCont{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+.basketTotalTitle{
+    width: 30%;
+}
+.basketTotal{
+    width: 10%;
+}
+/* слайдер */
+#slider{
+    display: flex;
+    justify-content: center;
+}
+.slides-item{
+    width: 500px;
+    height: 250px;
+}
+/* ////////пагинация////////// */
+#cart{
+    width: 30%;
+    height: 300px;
+    border: 1px solid rgba(128, 128, 128, 0.317);
+    display: block;
+    flex-wrap: wrap;
+    margin: 10px;
+    position: relative;
+    font-family: 'Akaya Telivigala', cursive;
+    
+}
+#cart:hover{
+    box-shadow: 0 0 10px #ffd56b;
+}
+#pag-box{
+    display: flex;
+    justify-content: center;
+}
+#pagination {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+#pagination li{
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid #939b62;
+}
+#pagination li:hover, #pagination li.active{
+    color: black;
+    background-color: #ffd56b;
+    border: 1px solid #ffd56b;
+}
+#photocart{
+    width: 120px;
+    height: 70px;
+    padding-top: 13px;
+}
+#page{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+/* кнопки пагинации */
+.buy-btn{
+    border: 1px solid #ffd56b;
+    width: 159px;
+    height: 45px;
+    font-size: 25px;
+    color: gray;
+    margin: 30px auto;
+}
+.buy-btn:hover{
+    border: 1px solid #939b62;
+    background: #939b62;
+}
+
+/* фильтрация */
+.result{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffd56b;
+    height: 40px;
+    font-size: 26px;
+}
+.result button{
+    border: none;
+    background-color: #ffd56b;
+}
+footer{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #939b62;
+    height: 80px;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+@media(max-width: 900px){
+    #cart{
+        width: 46%;
+    }
+    .product-container{
+     display: none;
+      margin-left: -300px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .cart:hover .product-container {
+        display: block;
+    }
+}
+@media(max-width: 580px){
+  
+    #cart{
+        width: 98%;
+    }
+    .result{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        height: 100px;
+        margin: 20px;
+        font-size: 30px;
+    }
+    .product-container:hover{
+        display: flex;
+ }
+ .slides-item{
+     width: 260;
+ }
+}
+.prev-button-pag{
+    margin: 5px;
+    width: 20px;
+    height: 35px;
+}
+.next-button-pag{
+    margin: 3px;
+    width: 20px;
+    height: 35px;
+}
